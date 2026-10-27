@@ -1,0 +1,13 @@
+{
+  "id": "P003",
+  "buys": true,
+  "purchases_first_month": 1,
+  "reason_code": "convenience",
+  "reason": "10 dollars pour un mois, en M-Pesa, et c'est leur équipe qui installe et écrit les premiers messages : je n'ai rien à apprendre, je teste et je vois si des clients répondent. Si le rapport ne montre pas de vrais clients au bout du mois, j'arrête.",
+  "objection": "Je ne connais pas Vellum, et j'ai peur que ces messages automatiques fassent passer mon business pour du spam auprès des restaurants de Gombe. Et à 25 dollars après le premier mois, il faut que ça ramène au moins un client, sinon c'est de l'argent perdu.",
+  "would_change_my_mind": "",
+  "price_too_cheap": 3,
+  "price_cheap": 10,
+  "price_expensive": 35,
+  "price_too_expensive": 60
+}

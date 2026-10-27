@@ -1,0 +1,222 @@
+[
+ {
+  "id": "P001",
+  "name": "Freya",
+  "age": 47,
+  "segment": "Petit commerce de quartier (salon, restaurant, boutique)",
+  "income": 7000,
+  "behaviour": "Chasseur de prix",
+  "behaviour_how": "Compare tout, négocie chaque dollar, cherche la version gratuite.",
+  "objection": "Les gens n'aiment pas recevoir des messages d'inconnus, ça fait arnaque",
+  "habit": "tu poste tes produits en statut WhatsApp chaque matin"
+ },
+ {
+  "id": "P002",
+  "name": "Adrian",
+  "age": 40,
+  "segment": "Petit commerce de quartier (salon, restaurant, boutique)",
+  "income": 8000,
+  "behaviour": "Tout sur WhatsApp perso",
+  "behaviour_how": "Vend et répond depuis son WhatsApp personnel, statuts quotidiens, pas d'outil.",
+  "objection": "Un site web, c'est pour les grandes entreprises",
+  "habit": "tu poste tes produits en statut WhatsApp chaque matin"
+ },
+ {
+  "id": "P003",
+  "name": "Declan",
+  "age": 32,
+  "segment": "PME établie à Gombe (5 à 30 employés)",
+  "income": 18000,
+  "behaviour": "Ambitieux digital",
+  "behaviour_how": "Suit des pages business sur Facebook/TikTok, veut grandir, essaie les nouveaux outils.",
+  "objection": "Internet et l'électricité coupent tout le temps, je n'ai pas le temps d'apprendre une application",
+  "habit": "tu paies presque tout en M-Pesa ou en dollars cash"
+ },
+ {
+  "id": "P004",
+  "name": "Fatima",
+  "age": 47,
+  "segment": "Petite agence (marketing, événementiel, immobilier)",
+  "income": 11000,
+  "behaviour": "Tout sur WhatsApp perso",
+  "behaviour_how": "Vend et répond depuis son WhatsApp personnel, statuts quotidiens, pas d'outil.",
+  "objection": "Je ne sais pas si c'est fiable, qui est derrière Vellum ?",
+  "habit": "tu fais partie de plusieurs groupes WhatsApp de commerçants"
+ },
+ {
+  "id": "P005",
+  "name": "Daniel",
+  "age": 48,
+  "segment": "Freelance, commercial indépendant ou coach",
+  "income": 11000,
+  "behaviour": "Chasseur de prix",
+  "behaviour_how": "Compare tout, négocie chaque dollar, cherche la version gratuite.",
+  "objection": "Je ne veux pas que mon numéro WhatsApp soit bloqué pour spam",
+  "habit": "tu as un cousin à l'étranger qui t'envoie parfois des idées de business"
+ },
+ {
+  "id": "P006",
+  "name": "Aisha",
+  "age": 26,
+  "segment": "Petit commerce de quartier (salon, restaurant, boutique)",
+  "income": 4000,
+  "behaviour": "Délègue à un proche",
+  "behaviour_how": "Un neveu ou un employé gère les réseaux ; le patron décide mais ne touche pas.",
+  "objection": "Un site web, c'est pour les grandes entreprises",
+  "habit": "tu paies presque tout en M-Pesa ou en dollars cash"
+ },
+ {
+  "id": "P007",
+  "name": "Luis",
+  "age": 37,
+  "segment": "Freelance, commercial indépendant ou coach",
+  "income": 7000,
+  "behaviour": "Tout sur WhatsApp perso",
+  "behaviour_how": "Vend et répond depuis son WhatsApp personnel, statuts quotidiens, pas d'outil.",
+  "objection": "Mes clients viennent du bouche-à-oreille, je n'ai pas besoin de ça",
+  "habit": "tu poste tes produits en statut WhatsApp chaque matin"
+ },
+ {
+  "id": "P008",
+  "name": "Jonah",
+  "age": 35,
+  "segment": "PME établie à Gombe (5 à 30 employés)",
+  "income": 20000,
+  "behaviour": "Délègue à un proche",
+  "behaviour_how": "Un neveu ou un employé gère les réseaux ; le patron décide mais ne touche pas.",
+  "objection": "Les gens n'aiment pas recevoir des messages d'inconnus, ça fait arnaque",
+  "habit": "tu as deux téléphones et deux numéros"
+ },
+ {
+  "id": "P009",
+  "name": "Min",
+  "age": 30,
+  "segment": "PME établie à Gombe (5 à 30 employés)",
+  "income": 16000,
+  "behaviour": "Bouche-à-oreille",
+  "behaviour_how": "Trouve ses clients par recommandation et ne voit pas pourquoi changer.",
+  "objection": "Internet et l'électricité coupent tout le temps, je n'ai pas le temps d'apprendre une application",
+  "habit": "tu passes la journée à Gombe et rentres tard à cause des embouteillages"
+ },
+ {
+  "id": "P010",
+  "name": "Talia",
+  "age": 48,
+  "segment": "Petite agence (marketing, événementiel, immobilier)",
+  "income": 13000,
+  "behaviour": "Ambitieux digital",
+  "behaviour_how": "Suit des pages business sur Facebook/TikTok, veut grandir, essaie les nouveaux outils.",
+  "objection": "Payer chaque mois, c'est difficile quand le business est irrégulier",
+  "habit": "tu paies presque tout en M-Pesa ou en dollars cash"
+ },
+ {
+  "id": "P011",
+  "name": "Sienna",
+  "age": 26,
+  "segment": "Petit commerce de quartier (salon, restaurant, boutique)",
+  "income": 5000,
+  "behaviour": "Tout sur WhatsApp perso",
+  "behaviour_how": "Vend et répond depuis son WhatsApp personnel, statuts quotidiens, pas d'outil.",
+  "objection": "Les gens n'aiment pas recevoir des messages d'inconnus, ça fait arnaque",
+  "habit": "tu as un cousin à l'étranger qui t'envoie parfois des idées de business"
+ },
+ {
+  "id": "P012",
+  "name": "Ravi",
+  "age": 37,
+  "segment": "Petit commerce de quartier (salon, restaurant, boutique)",
+  "income": 2000,
+  "behaviour": "Bouche-à-oreille",
+  "behaviour_how": "Trouve ses clients par recommandation et ne voit pas pourquoi changer.",
+  "objection": "Un site web, c'est pour les grandes entreprises",
+  "habit": "tu fais partie de plusieurs groupes WhatsApp de commerçants"
+ },
+ {
+  "id": "P013",
+  "name": "Yara",
+  "age": 50,
+  "segment": "Petit commerce de quartier (salon, restaurant, boutique)",
+  "income": 4000,
+  "behaviour": "Bouche-à-oreille",
+  "behaviour_how": "Trouve ses clients par recommandation et ne voit pas pourquoi changer.",
+  "objection": "Payer chaque mois, c'est difficile quand le business est irrégulier",
+  "habit": "tu as deux téléphones et deux numéros"
+ },
+ {
+  "id": "P014",
+  "name": "Celine",
+  "age": 27,
+  "segment": "Petit commerce de quartier (salon, restaurant, boutique)",
+  "income": 8000,
+  "behaviour": "Méfiant des arnaques en ligne",
+  "behaviour_how": "A déjà perdu de l'argent sur internet, ne paie qu'après avoir vu un résultat ou une personne en vrai.",
+  "objection": "Payer chaque mois, c'est difficile quand le business est irrégulier",
+  "habit": "tu passes la journée à Gombe et rentres tard à cause des embouteillages"
+ },
+ {
+  "id": "P015",
+  "name": "Keisha",
+  "age": 39,
+  "segment": "Petit commerce de quartier (salon, restaurant, boutique)",
+  "income": 7000,
+  "behaviour": "Tout sur WhatsApp perso",
+  "behaviour_how": "Vend et répond depuis son WhatsApp personnel, statuts quotidiens, pas d'outil.",
+  "objection": "Je ne sais pas si c'est fiable, qui est derrière Vellum ?",
+  "habit": "tu as un cousin à l'étranger qui t'envoie parfois des idées de business"
+ },
+ {
+  "id": "P016",
+  "name": "Mateo",
+  "age": 32,
+  "segment": "Freelance, commercial indépendant ou coach",
+  "income": 10000,
+  "behaviour": "Méfiant des arnaques en ligne",
+  "behaviour_how": "A déjà perdu de l'argent sur internet, ne paie qu'après avoir vu un résultat ou une personne en vrai.",
+  "objection": "Les gens n'aiment pas recevoir des messages d'inconnus, ça fait arnaque",
+  "habit": "tu passes la journée à Gombe et rentres tard à cause des embouteillages"
+ },
+ {
+  "id": "P017",
+  "name": "Kira",
+  "age": 30,
+  "segment": "Freelance, commercial indépendant ou coach",
+  "income": 12000,
+  "behaviour": "Ambitieux digital",
+  "behaviour_how": "Suit des pages business sur Facebook/TikTok, veut grandir, essaie les nouveaux outils.",
+  "objection": "Internet et l'électricité coupent tout le temps, je n'ai pas le temps d'apprendre une application",
+  "habit": "tu poste tes produits en statut WhatsApp chaque matin"
+ },
+ {
+  "id": "P018",
+  "name": "Sofia",
+  "age": 23,
+  "segment": "Freelance, commercial indépendant ou coach",
+  "income": 4000,
+  "behaviour": "Méfiant des arnaques en ligne",
+  "behaviour_how": "A déjà perdu de l'argent sur internet, ne paie qu'après avoir vu un résultat ou une personne en vrai.",
+  "objection": "Payer chaque mois, c'est difficile quand le business est irrégulier",
+  "habit": "tu fais partie de plusieurs groupes WhatsApp de commerçants"
+ },
+ {
+  "id": "P019",
+  "name": "Oscar",
+  "age": 40,
+  "segment": "PME établie à Gombe (5 à 30 employés)",
+  "income": 10000,
+  "behaviour": "Délègue à un proche",
+  "behaviour_how": "Un neveu ou un employé gère les réseaux ; le patron décide mais ne touche pas.",
+  "objection": "Je ne sais pas si c'est fiable, qui est derrière Vellum ?",
+  "habit": "tu poste tes produits en statut WhatsApp chaque matin"
+ },
+ {
+  "id": "P020",
+  "name": "Felix",
+  "age": 23,
+  "segment": "PME établie à Gombe (5 à 30 employés)",
+  "income": 26000,
+  "behaviour": "Chasseur de prix",
+  "behaviour_how": "Compare tout, négocie chaque dollar, cherche la version gratuite.",
+  "objection": "Les gens n'aiment pas recevoir des messages d'inconnus, ça fait arnaque",
+  "habit": "tu passes la journée à Gombe et rentres tard à cause des embouteillages"
+ }
+]

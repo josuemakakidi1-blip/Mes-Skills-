@@ -1,0 +1,13 @@
+{
+  "id": "P007",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "need",
+  "reason": "Mes clients viennent du bouche-à-oreille et de mes statuts WhatsApp, ça marche déjà. 25 dollars par mois, c'est presque une semaine de ce que je gagne, pour envoyer des messages à des inconnus qui ne me connaissent pas.",
+  "objection": "Les gens ici achètent parce qu'ils me connaissent ou qu'un ami m'a recommandé. Un message automatique à mon nom envoyé à des inconnus, ça peut faire spam et abîmer ma réputation, et je ne sais pas si ça ramène un seul vrai client.",
+  "would_change_my_mind": "Voir un indépendant comme moi à Kinshasa, que je connais, qui a gagné des clients payants avec ça le premier mois, et pouvoir tester pour presque rien sans risque pour mon numéro.",
+  "price_too_cheap": 2,
+  "price_cheap": 5,
+  "price_expensive": 10,
+  "price_too_expensive": 20
+}

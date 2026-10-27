@@ -1,0 +1,13 @@
+{
+  "id": "P008",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "trust",
+  "reason": "25 dollars ce n'est rien pour moi, mais mon nom c'est tout. Si une machine envoie des messages à des restaurants qui ne me connaissent pas, les gens vont penser que ma boîte fait de l'arnaque, et à Gombe tout le monde se parle.",
+  "objection": "Les gens n'aiment pas recevoir des messages d'inconnus, ça fait arnaque. Je ne veux pas que mon entreprise soit vue comme ça, et je ne sais pas qui chez Vellum va écrire en mon nom.",
+  "would_change_my_mind": "Voir un patron que je connais à Gombe qui l'utilise depuis quelques mois et qui a vraiment signé des clients sans abîmer sa réputation, et pouvoir valider chaque message avant qu'il parte.",
+  "price_too_cheap": 5,
+  "price_cheap": 15,
+  "price_expensive": 50,
+  "price_too_expensive": 100
+}

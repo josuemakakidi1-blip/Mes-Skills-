@@ -1,0 +1,13 @@
+{
+  "id": "P004",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "trust",
+  "reason": "Je ne connais pas Vellum, et je ne vais pas laisser une appli inconnue écrire à des clients en mon nom. Mes clients viennent du bouche-à-oreille et de mes groupes WhatsApp, si un message automatique sonne faux c'est ma réputation qui prend.",
+  "objection": "Qui est derrière Vellum et est-ce que ça va vraiment marcher ? Payer 25 dollars chaque mois pour des messages à des inconnus qui ne répondront peut-être jamais, alors que mon argent est compté.",
+  "would_change_my_mind": "Une commerçante de mes groupes WhatsApp que je connais qui me montre ses vrais résultats, avec des clients gagnés grâce à Magnet.",
+  "price_too_cheap": 3,
+  "price_cheap": 8,
+  "price_expensive": 15,
+  "price_too_expensive": 25
+}

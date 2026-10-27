@@ -1,0 +1,37 @@
+{
+  "business": "Vellum + Magnet : site web Vellum + Magnet, application de prospection et de relance automatique sur WhatsApp, à Kinshasa",
+  "target": "Patrons de petits commerces, PME et indépendants de Kinshasa qui vendent par WhatsApp et cherchent eux-mêmes leurs clients, sans équipe commerciale",
+  "where": "Kinshasa, RDC (Gombe, Limete, Ngaliema, Lingwala, Bandalungwa)",
+  "age": [22, 50],
+  "segments": [
+    {"name": "Petit commerce de quartier (salon, restaurant, boutique)", "share": 0.40, "income": [1800, 9000]},
+    {"name": "Freelance, commercial indépendant ou coach", "share": 0.25, "income": [2400, 12000]},
+    {"name": "PME établie à Gombe (5 à 30 employés)", "share": 0.25, "income": [9000, 40000]},
+    {"name": "Petite agence (marketing, événementiel, immobilier)", "share": 0.10, "income": [6000, 25000]}
+  ],
+  "behaviours": [
+    {"name": "Tout sur WhatsApp perso", "share": 0.25, "how": "Vend et répond depuis son WhatsApp personnel, statuts quotidiens, pas d'outil."},
+    {"name": "Méfiant des arnaques en ligne", "share": 0.15, "how": "A déjà perdu de l'argent sur internet, ne paie qu'après avoir vu un résultat ou une personne en vrai."},
+    {"name": "Chasseur de prix", "share": 0.15, "how": "Compare tout, négocie chaque dollar, cherche la version gratuite."},
+    {"name": "Bouche-à-oreille", "share": 0.15, "how": "Trouve ses clients par recommandation et ne voit pas pourquoi changer."},
+    {"name": "Ambitieux digital", "share": 0.15, "how": "Suit des pages business sur Facebook/TikTok, veut grandir, essaie les nouveaux outils."},
+    {"name": "Délègue à un proche", "share": 0.15, "how": "Un neveu ou un employé gère les réseaux ; le patron décide mais ne touche pas."}
+  ],
+  "objections": [
+    "Je ne veux pas que mon numéro WhatsApp soit bloqué pour spam",
+    "Mes clients viennent du bouche-à-oreille, je n'ai pas besoin de ça",
+    "Payer chaque mois, c'est difficile quand le business est irrégulier",
+    "Les gens n'aiment pas recevoir des messages d'inconnus, ça fait arnaque",
+    "Je ne sais pas si c'est fiable, qui est derrière Vellum ?",
+    "Internet et l'électricité coupent tout le temps, je n'ai pas le temps d'apprendre une application",
+    "Un site web, c'est pour les grandes entreprises"
+  ],
+  "habits": [
+    "tu poste tes produits en statut WhatsApp chaque matin",
+    "tu paies presque tout en M-Pesa ou en dollars cash",
+    "tu passes la journée à Gombe et rentres tard à cause des embouteillages",
+    "tu as deux téléphones et deux numéros",
+    "tu fais partie de plusieurs groupes WhatsApp de commerçants",
+    "tu as un cousin à l'étranger qui t'envoie parfois des idées de business"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "P020",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "trust",
+  "reason": "Moi-même quand je reçois un message WhatsApp d'un inconnu, je le supprime direct, ça sent l'arnaque. Je ne vais pas payer 25 dollars par mois pour que mon nom passe pour un spammeur auprès des restaurants de Gombe.",
+  "objection": "Les gens vont me prendre pour un arnaqueur et ça peut abîmer ma réputation, et rien ne me prouve que ces messages vont ramener de vrais clients plutôt que des gens qui cliquent sur « ne plus recevoir ».",
+  "would_change_my_mind": "Voir un commerçant de Gombe que je connais me montrer ses vrais rapports avec des clients gagnés, et un premier mois gratuit pour tester sans risque.",
+  "price_too_cheap": 3,
+  "price_cheap": 8,
+  "price_expensive": 15,
+  "price_too_expensive": 25
+}

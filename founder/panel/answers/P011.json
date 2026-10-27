@@ -1,0 +1,13 @@
+{
+  "id": "P011",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "trust",
+  "reason": "Mes clients viennent du quartier et de mes statuts, ils me connaissent. Si une application envoie des messages à des inconnus en mon nom, ils vont penser que c'est une arnaque et ça va salir mon nom, et 25 dollars par mois c'est trop pour moi pour un truc pas sûr.",
+  "objection": "Les gens n'aiment pas recevoir des messages d'inconnus, ça fait arnaque. Je ne veux pas que mon commerce passe pour un spammeur, et je ne connais pas Vellum.",
+  "would_change_my_mind": "Voir une commerçante comme moi, que je connais ou qu'on me recommande, qui a vraiment gagné des clients avec ça, et pouvoir essayer gratuitement ou presque avant de payer.",
+  "price_too_cheap": 2,
+  "price_cheap": 5,
+  "price_expensive": 10,
+  "price_too_expensive": 15
+}

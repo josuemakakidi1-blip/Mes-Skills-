@@ -1,0 +1,13 @@
+{
+  "id": "P015",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "trust",
+  "reason": "Je ne connais pas Vellum, et je ne vais pas envoyer de l'argent par M-Pesa à une agence que personne autour de moi n'a essayée pour qu'elle écrive à des inconnus en mon nom. Mes clients viennent du quartier et de mes statuts, 25 dollars chaque mois c'est beaucoup pour moi.",
+  "objection": "Qui est derrière Vellum ? Si des gens reçoivent des messages à mon nom et trouvent ça bizarre, c'est ma réputation qui prend, et si l'agence disparaît, mon argent part avec.",
+  "would_change_my_mind": "Qu'un commerçant que je connais à Kinshasa me montre qu'il a vraiment eu des clients grâce à Magnet, et que je puisse voir l'équipe Vellum en vrai avant de payer.",
+  "price_too_cheap": 3,
+  "price_cheap": 7,
+  "price_expensive": 15,
+  "price_too_expensive": 25
+}

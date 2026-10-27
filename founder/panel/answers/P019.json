@@ -1,0 +1,13 @@
+{
+  "id": "P019",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "trust",
+  "reason": "Je ne connais pas Vellum, et je ne vais pas laisser une application inconnue écrire à des gens en mon nom. Mon neveu poste déjà mes produits en statut chaque matin, ça marche à peu près, je ne paie pas pour un risque.",
+  "objection": "Qui est derrière Vellum ? Si les messages envoyés à mon nom à des inconnus sont mal écrits ou dérangent, c'est ma réputation à Gombe qui prend, pas la leur.",
+  "would_change_my_mind": "Voir un commerçant de Gombe que je connais l'utiliser depuis quelques mois et me montrer qu'il a eu de vrais clients avec, et rencontrer l'équipe Vellum en personne.",
+  "price_too_cheap": 3,
+  "price_cheap": 10,
+  "price_expensive": 25,
+  "price_too_expensive": 50
+}

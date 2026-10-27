@@ -1,0 +1,13 @@
+{
+  "id": "P013",
+  "buys": false,
+  "purchases_first_month": 0,
+  "reason_code": "price",
+  "reason": "25 dollars chaque mois, c'est trop pour moi quand il y a des mois où je ne gagne presque rien. Mes clients viennent par recommandation, je ne vois pas pourquoi payer une machine pour envoyer des messages à des inconnus.",
+  "objection": "Payer chaque mois alors que mon business est irrégulier, et des inconnus qui reçoivent un message à mon nom risquent de me prendre pour quelqu'un qui dérange, pas pour un commerce sérieux.",
+  "would_change_my_mind": "Payer seulement quand un nouveau client vient vraiment chez moi grâce à l'application, pas un abonnement fixe.",
+  "price_too_cheap": 2,
+  "price_cheap": 5,
+  "price_expensive": 10,
+  "price_too_expensive": 20
+}

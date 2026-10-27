@@ -1,0 +1,346 @@
+<title>Vellum + Magnet</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout : un tableau de bord de fondateur, résumé en tête, puis une section par skill, navigation collante */
+:root{
+  --bg:#F6F4EF; --surface:#FFFFFF; --ink:#0F1B3D; --muted:#59617A; --line:#E2DED5;
+  --accent:#C1121F; --accent-soft:#FBE7E8; --navy-soft:#E8ECF6;
+  --good:#1F7A4D; --good-soft:#E3F3EA; --warn:#A15C00; --warn-soft:#FBF0DD; --bad:#B42318; --bad-soft:#FCE8E6;
+  --display:"Sora",system-ui,sans-serif; --body:"DM Sans",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0B1226; --surface:#121B36; --ink:#E9ECF5; --muted:#9AA3BD; --line:#24304F;
+  --accent:#FF6B75; --accent-soft:#3A1720; --navy-soft:#1A2547;
+  --good:#5BC98E; --good-soft:#12301F; --warn:#F0B35A; --warn-soft:#33250F; --bad:#FF8A80; --bad-soft:#3A1614; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1226; --surface:#121B36; --ink:#E9ECF5; --muted:#9AA3BD; --line:#24304F;
+  --accent:#FF6B75; --accent-soft:#3A1720; --navy-soft:#1A2547;
+  --good:#5BC98E; --good-soft:#12301F; --warn:#F0B35A; --warn-soft:#33250F; --bad:#FF8A80; --bad-soft:#3A1614; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.2}
+h1{font-size:clamp(2rem,5vw,3.1rem);font-weight:700;letter-spacing:-.02em}
+h2{font-size:1.6rem;font-weight:600}
+h3{font-size:1.05rem;font-weight:600}
+p{margin:0;max-width:68ch}
+a{color:var(--accent)}
+.eyebrow{font:500 .75rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header.hero{padding-block:40px 28px;display:grid;gap:18px}
+.hero .tag{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.hero .lead{font-size:1.15rem;color:var(--muted)}
+.magnet{color:var(--accent)}
+.verdict{display:flex;gap:14px;align-items:flex-start;background:var(--warn-soft);border:1px solid color-mix(in srgb,var(--warn) 35%,transparent);border-radius:14px;padding:16px 18px}
+.verdict b{font-family:var(--display)}
+.verdict .dot{flex:none;width:12px;height:12px;border-radius:50%;background:var(--warn);margin-top:7px}
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav.tabs .wrap{display:flex;gap:4px;overflow-x:auto;padding-block:10px;scrollbar-width:none}
+nav.tabs a{flex:none;text-decoration:none;color:var(--muted);font:500 .9rem var(--body);padding:7px 12px;border-radius:999px}
+nav.tabs a:hover,nav.tabs a:focus-visible{background:var(--navy-soft);color:var(--ink);outline:none}
+main{display:grid;gap:56px;padding-block:36px 64px}
+section{display:grid;gap:18px;scroll-margin-top:70px}
+.sec-head{display:grid;gap:6px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:4px}
+.kpi .v{font:600 1.55rem/1.1 var(--display);font-variant-numeric:tabular-nums}
+.kpi .l{font-size:.85rem;color:var(--muted)}
+.kpi.bad .v{color:var(--bad)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:10px;align-content:start;min-width:0}
+.card ul,.card ol{margin:0;padding-left:1.2em;display:grid;gap:6px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 .75rem var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--navy-soft)}
+tr:last-child td{border-bottom:none}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill{display:inline-block;font:500 .75rem/1 var(--mono);padding:5px 8px;border-radius:999px;white-space:nowrap}
+.pill.good{background:var(--good-soft);color:var(--good)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.pill.bad{background:var(--bad-soft);color:var(--bad)}
+.pill.navy{background:var(--navy-soft);color:var(--ink)}
+.bar{height:10px;border-radius:999px;background:var(--navy-soft);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:999px}
+.seg{display:grid;grid-template-columns:minmax(0,1fr) 120px 48px;gap:12px;align-items:center;font-size:.93rem}
+.seg .pct{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+blockquote{margin:0;padding:10px 14px;border-left:3px solid var(--line);color:var(--muted);font-style:italic}
+.tip{background:var(--navy-soft);border-radius:14px;padding:18px;display:grid;gap:10px}
+.tip h3{display:flex;gap:8px;align-items:baseline}
+.tier{border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:8px;background:var(--surface);align-content:start}
+.tier.star{border:2px solid var(--accent)}
+.tier .price{font:700 1.9rem/1 var(--display)}
+.tier .price small{font:500 .9rem var(--body);color:var(--muted)}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;overflow-x:auto}
+.chart svg{display:block;width:100%;min-width:560px;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:.85rem;color:var(--muted);padding-top:8px}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--c)}
+.hooks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;counter-reset:h}
+.hook{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;gap:4px}
+.hook b{font-family:var(--display);font-weight:600}
+.hook small{color:var(--muted)}
+.swatches{display:flex;flex-wrap:wrap;gap:10px}
+.sw{display:grid;gap:6px;font:500 .78rem var(--mono);color:var(--muted)}
+.sw i{display:block;width:96px;height:56px;border-radius:10px;border:1px solid var(--line)}
+.week{display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.week:last-child{border-bottom:none}
+.week .d{font:500 .85rem var(--mono);color:var(--muted)}
+.crit{color:var(--accent);font-weight:700}
+footer{border-top:1px solid var(--line);padding-block:24px 40px;color:var(--muted);font-size:.88rem}
+@media (max-width:560px){.week{grid-template-columns:1fr;gap:4px}.seg{grid-template-columns:minmax(0,1fr) 70px 44px}}
+@media (prefers-reduced-motion:no-preference){nav.tabs a{transition:background .15s}}
+</style>
+
+<header class="wrap hero">
+  <div class="tag"><span class="eyebrow">Pack founder · Kinshasa · 27 octobre 2026</span></div>
+  <h1>Vellum crée l'aimant. <span class="magnet">Magnet attire le métal.</span></h1>
+  <p class="lead">Le tableau complet du lancement : business plan, prix, concurrence, panel d'acheteurs, marketing, marque et plan de lancement, avec les conseils à appliquer.</p>
+  <div class="verdict">
+    <span class="dot" aria-hidden="true"></span>
+    <p><b>Verdict : pas encore.</b> Les chiffres tiennent (3 tests sur 4 passent), mais seulement 15 % des acheteurs simulés achètent, sous la barre des 25 %. Le frein n'est pas le prix, c'est la <b>confiance</b>. Le plan ci-dessous corrige ça avant de dépenser.</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <div class="wrap">
+    <a href="#resume">Résumé</a><a href="#conseils">Conseils clés</a><a href="#board">Conseil d'administration</a><a href="#concurrence">Concurrence</a><a href="#panel">Panel</a><a href="#prix">Prix</a><a href="#chiffres">Chiffres</a><a href="#marketing">Marketing</a><a href="#marque">Marque</a><a href="#lancement">Lancement</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="resume">
+  <div class="sec-head"><span class="eyebrow">Résumé</span><h2>Les chiffres clés de Magnet Pro à 20 USD/mois</h2></div>
+  <div class="kpis">
+    <div class="kpi"><span class="v">11,65 $</span><span class="l">Marge par client et par mois (58 %)</span></div>
+    <div class="kpi"><span class="v">11</span><span class="l">Clients actifs pour être rentable</span></div>
+    <div class="kpi"><span class="v">+2 241 $</span><span class="l">Bénéfice d'exploitation année 1</span></div>
+    <div class="kpi"><span class="v">257 $</span><span class="l">Trésorerie à trouver avant autofinancement</span></div>
+    <div class="kpi"><span class="v">Mois 6</span><span class="l">Démarrage remboursé</span></div>
+    <div class="kpi bad"><span class="v">3 / 20</span><span class="l">Acheteurs simulés qui achètent (15 %)</span></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>Ce que c'est</h3><p>Vellum (agence web déjà active) et Magnet (app qui trouve des prospects, leur écrit sur WhatsApp et relance automatiquement) vendent ensemble un « système client » aux PME, agences et indépendants de Kinshasa qui n'ont pas d'équipe commerciale.</p></div>
+    <div class="card"><h3>Les 4 tests du plan</h3>
+      <ul>
+        <li><span class="pill good">OK</span> Chaque client rapporte avant les frais fixes</li>
+        <li><span class="pill good">OK</span> L'année 1 est bénéficiaire</li>
+        <li><span class="pill good">OK</span> Seuil (11) sous la capacité (80)</li>
+        <li><span class="pill bad">Échec</span> 15 % d'achat, barre à 25 %</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="conseils">
+  <div class="sec-head"><span class="eyebrow">Conseils clés</span><h2>Ce qu'il faut faire, dans l'ordre</h2></div>
+  <div class="grid2">
+    <div class="tip"><h3><span class="pill navy">Cette semaine</span>Passer à l'API WhatsApp officielle</h3><p>Ouvrir un compte WhatsApp Business Platform (Cloud API) au nom de Vellum, faire vérifier l'entreprise par Meta, confirmer le prix réel d'un message en RDC. Les trois membres du conseil en font la condition n° 1 : un numéro client bloqué tue le produit.</p></div>
+    <div class="tip"><h3><span class="pill navy">Novembre</span>Prouver sur Vellum, puis 10 pilotes</h3><p>Deux semaines de Magnet pour Vellum (200 prospects). Ensuite, 10 PME installées en personne, avec le mois 1 gratuit et le mois 2 payé seulement s'il y a au moins 3 réponses intéressées. Objectif : 5 pilotes sur 10 qui paient.</p></div>
+    <div class="tip"><h3><span class="pill navy">Cible</span>Une seule cible au départ</h3><p>PME de Gombe, petites agences, freelances et commerciaux ambitieux. Les petits commerces de quartier ont dit non à 100 % : on y reviendra plus tard, avec la formule Essentiel ou le paiement au résultat.</p></div>
+    <div class="tip"><h3><span class="pill navy">Produit</span>Le client valide chaque message</h3><p>« Rien ne part sans vous », plus un bouton « ne plus recevoir ». C'est la réponse directe à la peur n° 1 du panel : « des messages en mon nom qui font arnaque ».</p></div>
+    <div class="tip"><h3><span class="pill navy">Argent</span>Vellum finance Magnet</h3><p>Il faut environ 257 USD avant que Magnet se paie seul. Un ou deux sites Vellum vendus suffisent. Ne pas dépenser en publicité avant 10 clients payants.</p></div>
+    <div class="tip"><h3><span class="pill navy">Plus tard</span>Facebook et LinkedIn</h3><p>Pas avant 10 clients payants sur WhatsApp. Trop de choses à la fois, c'est le 3e risque relevé par le conseil.</p></div>
+  </div>
+</section>
+
+<section id="board">
+  <div class="sec-head"><span class="eyebrow">founder-board</span><h2>Le conseil d'administration : 3 « financer si », 4,3/10</h2><p>Trois lentilles tirées de cadres publiés (l'offre, le monopole, le produit). Ce ne sont pas leurs auteurs qui parlent.</p></div>
+  <div class="grid3">
+    <div class="card"><span class="pill warn">5/10 · Financer si</span><h3>Lentille Offre</h3><p>Vendre un résultat, pas un outil. Empiler site + captation + relance + messages rédigés + rapport, avec une garantie, puis tester un prix plus haut que 15 USD.</p></div>
+    <div class="card"><span class="pill warn">4/10 · Financer si</span><h3>Lentille Monopole</h3><p>La boucle Vellum ↔ Magnet est un vrai canal, mais rien n'empêche la copie. Il faut dominer un petit segment (10 clients payants) et construire une barrière : données locales, marque de confiance.</p></div>
+    <div class="card"><span class="pill warn">4/10 · Financer si</span><h3>Lentille Produit</h3><p>Trop de choses à la fois. Une promesse pour une cible : « relancer automatiquement vos prospects WhatsApp ». Soigner les 5 premières minutes et le premier message.</p></div>
+  </div>
+  <div class="card"><h3>Les risques relevés par plusieurs membres</h3>
+    <ol>
+      <li><b>Blocage WhatsApp / Meta</b> (les 3) : envoi hors de l'API officielle = numéros bannis.</li>
+      <li><b>Aucune preuve</b> (les 3) : pas encore de client Magnet ni de résultat mesuré.</li>
+      <li><b>Dispersion</b> (Produit + Monopole) : 3 réseaux, 6 cibles, 2 produits.</li>
+      <li><b>Spam et réputation</b> (Monopole + Produit) : un message raté abîme le nom du client.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="concurrence">
+  <div class="sec-head"><span class="eyebrow">founder-competitors</span><h2>La concurrence et le trou dans le marché</h2><p>Sources publiques du 27/10/2026. Les prix des sites viennent surtout d'un seul prestataire et ne sont pas vérifiés.</p></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Concurrent</th><th>Type</th><th>Prix</th><th>Point faible pour Kinshasa</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://codecanyon.net/search/google-maps-leads" target="_blank" rel="noopener">Bulk senders + extracteurs Maps</a></td><td>Direct</td><td>19 à 99 $ une fois</td><td>Envoi non officiel, numéros bannis</td></tr>
+      <tr><td><a href="https://www.capterra.co.za/reviews/204314/wati" target="_blank" rel="noopener">WATI</a></td><td>Direct</td><td>dès 59 $/mois + messages</td><td>Cher, carte bancaire, en anglais</td></tr>
+      <tr><td><a href="https://emelia.io/fr/software/waalaxy/prix" target="_blank" rel="noopener">Waalaxy</a></td><td>Direct (LinkedIn)</td><td>0 à 49 €/mois</td><td>Pas de WhatsApp, pas de Mobile Money</td></tr>
+      <tr><td><a href="https://alternativeto.net/software/mapsscraper/about/" target="_blank" rel="noopener">MapsScraper</a> / <a href="https://apify.com/tugelbay/google-maps-leads" target="_blank" rel="noopener">Apify</a></td><td>Indirect</td><td>0 à 9,90 $/mois</td><td>Trouve les contacts mais n'écrit pas, ne relance pas</td></tr>
+      <tr><td><a href="https://kolonell.com/fr/blog/meilleure-agence-web-kinshasa-types-prestataires-budgets-usd-2026" target="_blank" rel="noopener">Agences web kinoises</a></td><td>Direct pour Vellum</td><td>~1 300 à 4 000 $ le site vitrine</td><td>Un site « joli » qui ne relance personne</td></tr>
+      <tr><td>Prospection à la main</td><td>Substitut</td><td>0 $, des heures</td><td>Le problème que Magnet attaque</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid2">
+    <div class="card"><h3>Le trou</h3><p>Personne ne vend, à Kinshasa, en français, payable en Mobile Money, un système complet : un site qui capte + des relances WhatsApp automatiques et conformes + de l'aide humaine pour démarrer. Case « local + automatisé + conforme » : vide.</p></div>
+    <div class="card"><h3>La menace</h3><p>N'importe quel freelance peut revendre un outil d'envoi en masse à 20 $ comme « son logiciel ». Votre défense : la conformité, des résultats prouvés et le service en personne.</p></div>
+  </div>
+</section>
+
+<section id="panel">
+  <div class="sec-head"><span class="eyebrow">founder-consumer</span><h2>Le panel : 20 acheteurs simulés, 3 achètent</h2><p>Ce sont des acheteurs simulés : bons pour trouver les objections, pas pour prédire les ventes. Le taux d'achat est une borne haute.</p></div>
+  <div class="grid2">
+    <div class="card"><h3>Qui achète, par segment</h3>
+      <div class="seg"><span>Petite agence (2)</span><div class="bar"><i style="width:50%"></i></div><span class="pct">50 %</span></div>
+      <div class="seg"><span>PME de Gombe (5)</span><div class="bar"><i style="width:20%"></i></div><span class="pct">20 %</span></div>
+      <div class="seg"><span>Freelance / commercial (5)</span><div class="bar"><i style="width:20%"></i></div><span class="pct">20 %</span></div>
+      <div class="seg"><span>Petit commerce de quartier (8)</span><div class="bar"><i style="width:0%"></i></div><span class="pct">0 %</span></div>
+      <p class="eyebrow">Groupes de 2 à 8 personnes : indicatif seulement</p>
+    </div>
+    <div class="card"><h3>Pourquoi ils disent non (17)</h3>
+      <div class="seg"><span>Confiance</span><div class="bar"><i style="width:65%"></i></div><span class="pct">11</span></div>
+      <div class="seg"><span>Pas besoin</span><div class="bar"><i style="width:12%"></i></div><span class="pct">2</span></div>
+      <div class="seg"><span>Prix</span><div class="bar"><i style="width:12%"></i></div><span class="pct">2</span></div>
+      <div class="seg"><span>Habitude</span><div class="bar"><i style="width:12%"></i></div><span class="pct">2</span></div>
+      <blockquote>« Je ne connais pas Vellum, et je ne vais pas laisser une appli inconnue écrire à des clients en mon nom. » (acheteur simulé P004)</blockquote>
+    </div>
+  </div>
+  <div class="card"><h3>Ce qui ferait basculer un « non »</h3>
+    <ul>
+      <li>Voir un patron qu'ils connaissent montrer de vrais clients gagnés grâce à Magnet.</li>
+      <li>Essayer gratuitement, ou payer seulement après un premier résultat.</li>
+      <li>Quelqu'un de Vellum qui vient installer en personne.</li>
+      <li>Valider chaque message avant qu'il parte.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="prix">
+  <div class="sec-head"><span class="eyebrow">founder-pricing</span><h2>Le prix : trois formules et un lancement sans risque</h2><p>Zone acceptable du panel : 4,92 à 19,88 USD pour l'ensemble. Les segments qui achètent trouvent ça cher à partir de 20 à 35 USD. En dessous de 15 USD, le seuil de rentabilité explose (33 clients à 12 USD).</p></div>
+  <div class="grid3">
+    <div class="tier"><span class="eyebrow">Essentiel</span><div class="price">12 $ <small>/mois</small></div><p>100 messages, relance auto, rapport. Pour freelances et petits commerces.</p></div>
+    <div class="tier star"><span class="eyebrow">Pro · recommandé</span><div class="price">20 $ <small>/mois</small></div><p>300 messages, messages rédigés par Vellum, validation avant envoi, rapport chaque lundi. Pour PME et agences.</p></div>
+    <div class="tier"><span class="eyebrow">Business</span><div class="price">150 $ <small>+ 25 $/mois</small></div><p>Site Vellum avec bouton WhatsApp qui capte et relance + Magnet Pro. Prix du site non testé, à caler sur vos tarifs.</p></div>
+  </div>
+  <div class="card"><h3>Offre de lancement « Pilote 0 risque » : 10 places, jusqu'au 30 novembre 2026</h3><p>Installation en personne, mois 1 gratuit, mois 2 à 20 $ seulement si le rapport montre au moins 3 réponses intéressées. En échange : accord écrit pour montrer les résultats. Coût pour vous : environ 68 $ de messages pour les 10 pilotes.</p><p><b>À tester avec de vrais clients :</b> 15 $ contre 20 $ pour le Pro, et abonnement contre paiement au résultat pour les petits commerces.</p></div>
+</section>
+
+<section id="chiffres">
+  <div class="sec-head"><span class="eyebrow">founder-cfo</span><h2>Année 1, mois par mois</h2><p>Coûts en grande partie estimés (sources dans <code>cfo-sources.md</code>). Le prix d'un message en RDC (0,0225 $) vient d'une source tierce, à confirmer sur la grille Meta.</p></div>
+  <div class="chart" id="chart" role="img" aria-label="Clients actifs, bénéfice mensuel et cumul sur 12 mois"></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Un client Pro par mois</th><th style="text-align:right">USD</th></tr></thead>
+    <tbody>
+      <tr><td>Prix</td><td class="n">20,00</td></tr>
+      <tr><td>300 messages WhatsApp marketing (0,0225 $)</td><td class="n">−6,75</td></tr>
+      <tr><td>Frais Mobile Money (~3 %)</td><td class="n">−0,60</td></tr>
+      <tr><td>Données prospects</td><td class="n">−0,50</td></tr>
+      <tr><td>Serveur / IA de rédaction</td><td class="n">−0,50</td></tr>
+      <tr><td><b>Marge par client</b></td><td class="n"><b>11,65</b></td></tr>
+      <tr><td>Frais fixes mensuels (serveur, data, transport, flyers ; salaire fondateur 0)</td><td class="n">120</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Scénario</th><th style="text-align:right">Seuil (clients)</th><th style="text-align:right">Bénéfice année 1</th></tr></thead>
+    <tbody>
+      <tr><td>Plan de base (20 $)</td><td class="n">11</td><td class="n">2 241 $</td></tr>
+      <tr><td>Prix −10 %</td><td class="n">13</td><td class="n">1 609 $</td></tr>
+      <tr><td>Clients −20 %</td><td class="n">11</td><td class="n">1 505 $</td></tr>
+      <tr><td>Coûts +15 %</td><td class="n">12</td><td class="n">1 846 $</td></tr>
+      <tr><td>Ventes 2 fois plus lentes</td><td class="n">11</td><td class="n">401 $</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="marketing">
+  <div class="sec-head"><span class="eyebrow">founder-marketing</span><h2>Marketing : la confiance d'abord</h2></div>
+  <div class="card"><h3>Positionnement retenu</h3><p>Pour les patrons de Gombe qui oublient de relancer, Magnet relance à votre place, avec des messages que vous validez, et vous dit chaque semaine qui a répondu.</p></div>
+  <div class="grid3">
+    <div class="card"><span class="pill navy">Canal 1</span><h3>Démos en personne à Gombe</h3><p>10 minutes sur téléphone. ~30 $/mois de transport. On mesure les démos faites et les pilotes signés.</p></div>
+    <div class="card"><span class="pill navy">Canal 2</span><h3>Magnet lui-même</h3><p>« Ce message vous a été envoyé par Magnet. » La meilleure démo possible. Objectif : 10 % de réponses.</p></div>
+    <div class="card"><span class="pill navy">Canal 3</span><h3>Groupes WhatsApp + statuts</h3><p>0 $. Études de cas des pilotes (avec accord écrit), coulisses, FAQ « mon numéro est-il en sécurité ? ».</p></div>
+  </div>
+  <h3>Dix accroches</h3>
+  <div class="hooks">
+    <div class="hook"><b>« Vous validez chaque message avant qu'il parte. »</b><small>Répond à : ma réputation</small></div>
+    <div class="hook"><b>« Ce message vous a été envoyé par Magnet. »</b><small>Répond à : est-ce que ça marche ?</small></div>
+    <div class="hook"><b>« Le 2e mois, seulement si vous avez eu 3 réponses. »</b><small>Répond à : prix, confiance</small></div>
+    <div class="hook"><b>« API WhatsApp officielle : votre numéro ne risque rien. »</b><small>Répond à : blocage</small></div>
+    <div class="hook"><b>« On vient l'installer chez vous, à Gombe. »</b><small>Répond à : qui est Vellum ?</small></div>
+    <div class="hook"><b>« Combien de clients avez-vous oublié de relancer ce mois-ci ? »</b><small>Répond à : pas besoin</small></div>
+    <div class="hook"><b>« 20 $ par mois, moins qu'un seul client perdu. »</b><small>Répond à : prix</small></div>
+    <div class="hook"><b>« Un bouton « ne plus recevoir » dans chaque message. »</b><small>Répond à : spam</small></div>
+    <div class="hook"><b>« Pas d'application à apprendre : Vellum s'occupe de tout. »</b><small>Répond à : temps, coupures</small></div>
+    <div class="hook"><b>« Rapport chaque lundi : qui a répondu, qui relancer. »</b><small>Répond à : preuve</small></div>
+  </div>
+</section>
+
+<section id="marque">
+  <div class="sec-head"><span class="eyebrow">founder-brand</span><h2>Marque : « Magnet by Vellum »</h2><p>« Magnet » seul est un nom très utilisé, notamment par une app Mac connue. « Magnet by Vellum » le distingue et renforce l'écosystème. À vérifier vous-même : <a href="https://branddb.wipo.int" target="_blank" rel="noopener">base mondiale des marques de l'OMPI</a> (classes 9, 35, 42), domaines .cd et .com, comptes sociaux. Seul un avocat confirme une marque.</p></div>
+  <div class="grid2">
+    <div class="card"><h3>Promesse et slogans</h3><p><b>Promesse :</b> vos prospects relancés chaque semaine, avec des messages que vous validez.</p><ul><li>« Vellum crée l'aimant. Magnet attire le métal. »</li><li>« Magnet cherche. Vous signez. »</li><li>« Plus jamais un client oublié. »</li></ul><p><b>Voix :</b> directe, rassurante, kinoise.</p></div>
+    <div class="card"><h3>Couleurs et polices</h3>
+      <div class="swatches">
+        <div class="sw"><i style="background:#0F1B3D"></i>Bleu nuit #0F1B3D</div>
+        <div class="sw"><i style="background:#C1121F"></i>Rouge aimant #C1121F</div>
+        <div class="sw"><i style="background:#F8F5F0"></i>Blanc cassé #F8F5F0</div>
+      </div>
+      <p>Titres en Sora, textes en DM Sans ou Inter (gratuites, Google Fonts). Logo : un aimant en U dont les pôles sont deux bulles de discussion, lisible à 32 px. Jamais le logo ni le vert de WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<section id="lancement">
+  <div class="sec-head"><span class="eyebrow">founder-launch</span><h2>Le compte à rebours jusqu'au 15 décembre</h2><p>Les étapes en <span class="crit">rouge</span> déplacent la date de lancement si elles glissent.</p></div>
+  <div class="card">
+    <div class="week"><span class="d">27 oct. – 2 nov.</span><p><span class="crit">Chemin critique.</span> Compte WhatsApp Business Platform officiel, vérification Meta, modèles de messages validés, prix RDC confirmé.</p></div>
+    <div class="week"><span class="d">3 – 9 nov.</span><p>Ajouter au MVP la validation avant envoi et le bouton « ne plus recevoir ». Lancer Magnet pour Vellum (200 prospects).</p></div>
+    <div class="week"><span class="d">10 – 16 nov.</span><p>Mesurer les résultats Vellum. Compte marchand Mobile Money. Statut juridique et fiscalité avec un comptable.</p></div>
+    <div class="week"><span class="d">17 – 30 nov.</span><p><span class="crit">Chemin critique.</span> Signer et installer les 10 pilotes en personne. Page Magnet sur le site Vellum. Comptes @magnetbyvellum.</p></div>
+    <div class="week"><span class="d">1 – 14 déc.</span><p>Rapports pilotes chaque lundi, première étude de cas, liste d'attente. Journée portes ouvertes le 12 déc.</p></div>
+    <div class="week"><span class="d">15 déc.</span><p><b>Lancement public.</b> Offre jusqu'au 31 décembre. Facebook et LinkedIn seulement après 10 clients payants.</p></div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>À suivre chaque semaine</th><th>Cible</th><th>Alerte → action</th></tr></thead>
+    <tbody>
+      <tr><td>Clients actifs</td><td>14 au mois 4</td><td>Moins de 6 au mois 2 → revoir prix et offre</td></tr>
+      <tr><td>Taux de réponse Magnet</td><td>10 % ou plus</td><td>Moins de 5 % → réécrire, mieux cibler</td></tr>
+      <tr><td>Plaintes spam / blocages</td><td>0</td><td>1 blocage → pause, revoir volumes</td></tr>
+      <tr><td>Démos → clients</td><td>30 % ou plus</td><td>Moins de 15 % → revoir la démo</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap"><p>Le panel est composé d'acheteurs simulés et les chiffres sont des projections, en grande partie fondées sur des estimations. Seuls de vrais clients et de vrais devis les confirment. Ce n'est pas un conseil financier, juridique ou fiscal. Sources complètes dans le dossier <code>founder/</code> du dépôt Mes-Skills-.</p></div>
+</footer>
+
+<script>
+(function(){
+  const clients=[3,6,10,14,18,23,28,33,38,43,48,52];
+  const profit=[-85,-50,-4,43,90,148,206,264,323,381,439,486];
+  const cum=[-203,-253,-257,-214,-124,24,230,495,817,1198,1638,2123];
+  const W=760,H=320,L=56,R=56,T=20,B=40,pw=W-L-R,ph=H-T-B;
+  const yMin=-500,yMax=2500, y=v=>T+ph*(yMax-v)/(yMax-yMin);
+  const cMax=60, yc=v=>T+ph*(1-v/cMax);
+  const bw=pw/12, x=i=>L+bw*i+bw/2;
+  let s=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" font-family="DM Sans, system-ui, sans-serif" font-size="11">`;
+  for(let v=-500;v<=2500;v+=500){
+    s+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-width="${v===0?1.5:1}"/>`;
+    s+=`<text x="${L-8}" y="${y(v)+4}" text-anchor="end" fill="var(--muted)">${v.toLocaleString('fr-FR')} $</text>`;
+  }
+  for(let v=0;v<=60;v+=20){s+=`<text x="${W-R+8}" y="${yc(v)+4}" fill="var(--muted)">${v}</text>`;}
+  s+=`<text x="${W-R+8}" y="${T-6}" fill="var(--muted)">clients</text>`;
+  profit.forEach((p,i)=>{
+    const top=Math.min(y(p),y(0)),h=Math.abs(y(p)-y(0));
+    s+=`<rect x="${x(i)-bw*0.3}" y="${top}" width="${bw*0.6}" height="${Math.max(h,1)}" rx="3" fill="${p<0?'var(--bad)':'var(--accent)'}" opacity="${p<0?0.8:0.85}"><title>Mois ${i+1} : bénéfice ${p} $</title></rect>`;
+    s+=`<text x="${x(i)}" y="${H-B+18}" text-anchor="middle" fill="var(--muted)">M${i+1}</text>`;
+  });
+  s+=`<polyline fill="none" stroke="var(--ink)" stroke-width="2.5" points="${cum.map((v,i)=>x(i)+','+y(v)).join(' ')}"/>`;
+  cum.forEach((v,i)=>{s+=`<circle cx="${x(i)}" cy="${y(v)}" r="${i===11?5:3}" fill="var(--ink)"><title>Mois ${i+1} : cumul ${v} $</title></circle>`;});
+  s+=`<text x="${x(11)-8}" y="${y(2123)-10}" text-anchor="end" fill="var(--ink)" font-weight="700">+2 123 $</text>`;
+  s+=`<polyline fill="none" stroke="var(--good)" stroke-width="2" stroke-dasharray="5 4" points="${clients.map((v,i)=>x(i)+','+yc(v)).join(' ')}"/>`;
+  s+=`<line x1="${L}" x2="${W-R}" y1="${yc(11)}" y2="${yc(11)}" stroke="var(--warn)" stroke-dasharray="2 4"/>`;
+  s+=`<text x="${L+6}" y="${yc(11)-6}" fill="var(--warn)">seuil : 11 clients</text>`;
+  s+=`</svg><div class="legend"><span style="--c:var(--accent)">Bénéfice du mois</span><span style="--c:var(--bad)">Perte du mois</span><span style="--c:var(--ink)">Cumul après démarrage (axe gauche)</span><span style="--c:var(--good)">Clients actifs (axe droit)</span></div>`;
+  document.getElementById('chart').innerHTML=s;
+})();
+</script>

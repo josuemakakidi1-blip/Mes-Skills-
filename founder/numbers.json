@@ -1,0 +1,27 @@
+{
+  "business": "Magnet Pro (Vellum + Magnet), Kinshasa — unité = 1 client abonné pendant 1 mois",
+  "unit": "client-mois (abonnement Magnet Pro)",
+  "price": 20.0,
+  "variable": [
+    {"label": "Messages WhatsApp marketing via API officielle (300 x 0,0225 USD, tarif tiers RDC, à confirmer)", "cost": 6.75},
+    {"label": "Frais Mobile Money (~3 %, estimation)", "cost": 0.60},
+    {"label": "Données prospects (extraction ~500 fiches, estimation)", "cost": 0.50},
+    {"label": "Part serveur / IA de rédaction (estimation)", "cost": 0.50}
+  ],
+  "fixed_monthly": [
+    {"label": "Hébergement serveur Magnet (estimation)", "cost": 15},
+    {"label": "Forfait internet / data + crédit téléphone (estimation)", "cost": 35},
+    {"label": "Transport pour démos et installations à Gombe (estimation)", "cost": 30},
+    {"label": "Impression flyers + petites pubs Facebook (estimation)", "cost": 40},
+    {"label": "Rémunération fondateur (0 : payé par Vellum au départ)", "cost": 0}
+  ],
+  "startup": [
+    {"label": "Nom de domaine + hébergement 1 an (estimation)", "cost": 30},
+    {"label": "Crédit messages pour les pilotes gratuits (10 pilotes x 300 msg x 0,0225)", "cost": 68},
+    {"label": "Supports de démo imprimés (estimation)", "cost": 20}
+  ],
+  "days_per_month": 1,
+  "capacity_per_day": 80,
+  "plan_per_day": 60,
+  "ramp_per_day": [3, 6, 10, 14, 18, 23, 28, 33, 38, 43, 48, 52]
+}

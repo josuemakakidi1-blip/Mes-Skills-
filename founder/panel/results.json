@@ -1,0 +1,176 @@
+{
+ "business": "Vellum + Magnet : site web Vellum + Magnet, application de prospection et de relance automatique sur WhatsApp, à Kinshasa",
+ "seed": 255962,
+ "dealt": 20,
+ "answered": 20,
+ "skipped": [],
+ "buys": 3,
+ "passes": 17,
+ "buy_rate": 0.15,
+ "by_segment": [
+  [
+   "Petite agence (marketing, événementiel, immobilier)",
+   2,
+   0.5
+  ],
+  [
+   "PME établie à Gombe (5 à 30 employés)",
+   5,
+   0.2
+  ],
+  [
+   "Freelance, commercial indépendant ou coach",
+   5,
+   0.2
+  ],
+  [
+   "Petit commerce de quartier (salon, restaurant, boutique)",
+   8,
+   0.0
+  ]
+ ],
+ "by_behaviour": [
+  [
+   "Ambitieux digital",
+   3,
+   1.0
+  ],
+  [
+   "Chasseur de prix",
+   3,
+   0.0
+  ],
+  [
+   "Tout sur WhatsApp perso",
+   5,
+   0.0
+  ],
+  [
+   "Délègue à un proche",
+   3,
+   0.0
+  ],
+  [
+   "Bouche-à-oreille",
+   3,
+   0.0
+  ],
+  [
+   "Méfiant des arnaques en ligne",
+   3,
+   0.0
+  ]
+ ],
+ "by_income": [
+  [
+   "$11,000 and up",
+   8,
+   0.375
+  ],
+  [
+   "$7,000 to $11,000",
+   7,
+   0.0
+  ],
+  [
+   "under $7,000",
+   5,
+   0.0
+  ]
+ ],
+ "why_not": [
+  [
+   "trust",
+   11,
+   [
+    "Moi-même quand je reçois un message d'un numéro inconnu, je pense directement à une arnaque et je supprime, alors pourquoi les gens réagiraient autrement avec mes messages ? Et 25 dollars chaque mois, c'est beaucoup pour moi alors que mon statut WhatsApp ne me coûte rien.",
+    "Je ne connais pas Vellum, et je ne vais pas laisser une appli inconnue écrire à des clients en mon nom. Mes clients viennent du bouche-à-oreille et de mes groupes WhatsApp, si un message automatique sonne faux c'est ma réputation qui prend."
+   ],
+   [
+    "P001",
+    "P004"
+   ]
+  ],
+  [
+   "need",
+   2,
+   [
+    "Mes clients, ce sont les gens du quartier qui passent devant et ceux qui voient mon statut le matin, pas des restaurants de Gombe à prospecter. 25 dollars par mois pour envoyer des messages à des inconnus, ce n'est pas pour un petit commerce comme le mien.",
+    "Mes clients viennent du bouche-à-oreille et de mes statuts WhatsApp, ça marche déjà. 25 dollars par mois, c'est presque une semaine de ce que je gagne, pour envoyer des messages à des inconnus qui ne me connaissent pas."
+   ],
+   [
+    "P002",
+    "P007"
+   ]
+  ],
+  [
+   "price",
+   2,
+   [
+    "25 dollars chaque mois, c'est trop pour mon petit commerce, mes clients viennent du quartier et du bouche-à-oreille. Et ces applications, c'est pour les grandes entreprises, pas pour moi.",
+    "25 dollars chaque mois, c'est trop pour moi quand il y a des mois où je ne gagne presque rien. Mes clients viennent par recommandation, je ne vois pas pourquoi payer une machine pour envoyer des messages à des inconnus."
+   ],
+   [
+    "P006",
+    "P013"
+   ]
+  ],
+  [
+   "habit",
+   2,
+   [
+    "Mes clients viennent par recommandation depuis des années, ça marche, je ne vois pas pourquoi payer une application pour envoyer des messages à des inconnus. Et avec les coupures d'internet et de courant, je n'ai pas le temps d'apprendre un nouvel outil.",
+    "Mes clients viennent par recommandation et par mes groupes WhatsApp de commerçants, ça marche déjà. Payer 25 dollars par mois pour qu'une machine écrive à des inconnus en mon nom, je ne vois pas pourquoi, surtout que je gagne peu."
+   ],
+   [
+    "P009",
+    "P012"
+   ]
+  ]
+ ],
+ "why_yes": [
+  [
+   "convenience",
+   2,
+   [
+    "10 dollars pour un mois, en M-Pesa, et c'est leur équipe qui installe et écrit les premiers messages : je n'ai rien à apprendre, je teste et je vois si des clients répondent. Si le rapport ne montre pas de vrais clients au bout du mois, j'arrête.",
+    "À 10 dollars avec l'équipe qui installe tout et rédige les premiers messages, je n'ai rien à apprendre, donc j'essaie un mois pour voir si ça m'amène vraiment des clients. Mais à 25 dollars par mois après, je reste seulement si je vois des clients qui paient dans le rapport."
+   ],
+   [
+    "P003",
+    "P017"
+   ]
+  ],
+  [
+   "need",
+   1,
+   [
+    "Je passe des heures à chercher des clients moi-même sur WhatsApp, et à 10 dollars le premier mois sans engagement, avec l'équipe qui installe tout, je peux essayer sans grand risque. Mais je teste un mois, je ne promets rien pour la suite."
+   ],
+   [
+    "P010"
+   ]
+  ]
+ ],
+ "flip": [
+  "Voir un commerçant comme moi, ici à Kinshasa, me montrer qu'il a vraiment gagné des clients qui ont payé grâce à ça, et pouvoir essayer gratuitement d'abord.",
+  "Voir un commerçant comme moi, dans mon quartier, me montrer sur son téléphone des vrais clients qui sont venus acheter grâce à ça, et pouvoir essayer gratuitement d'abord.",
+  "Une commerçante de mes groupes WhatsApp que je connais qui me montre ses vrais résultats, avec des clients gagnés grâce à Magnet.",
+  "Un essai gratuit de deux semaines, ou payer seulement après un premier client trouvé, avec un commerçant que je connais à Kinshasa qui me montre que ça a marché pour lui.",
+  "Voir un commerce comme le mien dans mon quartier qui a vraiment gagné des clients avec ça, et payer seulement quand ça ramène quelqu'un.",
+  "Voir un indépendant comme moi à Kinshasa, que je connais, qui a gagné des clients payants avec ça le premier mois, et pouvoir tester pour presque rien sans risque pour mon numéro.",
+  "Voir un patron que je connais à Gombe qui l'utilise depuis quelques mois et qui a vraiment signé des clients sans abîmer sa réputation, et pouvoir valider chaque message avant qu'il parte.",
+  "Qu'un patron de PME que je connais à Gombe me montre qu'il a signé de vrais clients grâce à ça, et que Vellum s'occupe de tout sans que j'aie à toucher l'application.",
+  "Voir une commerçante comme moi, que je connais ou qu'on me recommande, qui a vraiment gagné des clients avec ça, et pouvoir essayer gratuitement ou presque avant de payer.",
+  "Un commerçant que je connais dans mes groupes WhatsApp qui me montre qu'il a vraiment gagné des clients qui paient grâce à ça.",
+  "Payer seulement quand un nouveau client vient vraiment chez moi grâce à l'application, pas un abonnement fixe.",
+  "Qu'un agent de Vellum passe à ma boutique à Gombe, installe tout devant moi, et que je ne paie qu'après avoir vu des clients arriver grâce aux messages, ou qu'un commerçant que je connais me montre ses résultats.",
+  "Qu'un commerçant que je connais à Kinshasa me montre qu'il a vraiment eu des clients grâce à Magnet, et que je puisse voir l'équipe Vellum en vrai avant de payer.",
+  "Rencontrer l'équipe Vellum en vrai à Gombe et voir un commerçant que je connais me montrer les clients réels qu'il a eus grâce à Magnet, avec la possibilité de payer seulement après un premier résultat.",
+  "Voir de mes yeux un commerçant de mon groupe WhatsApp qui a eu de vrais clients grâce à Magnet, ou un essai gratuit où je paie seulement après avoir reçu des réponses.",
+  "Voir un commerçant de Gombe que je connais l'utiliser depuis quelques mois et me montrer qu'il a eu de vrais clients avec, et rencontrer l'équipe Vellum en personne.",
+  "Voir un commerçant de Gombe que je connais me montrer ses vrais rapports avec des clients gagnés, et un premier mois gratuit pour tester sans risque."
+ ],
+ "purchases_first_month_per_buyer": 1.0,
+ "price_answers": 20
+}
